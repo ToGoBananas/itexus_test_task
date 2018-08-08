@@ -2,13 +2,13 @@ import json
 
 import nltk
 nltk.download('all')
-from flask import Flask, request
+from flask import Flask, request, render_template
 from meinheld import server, middleware
 from nltk.corpus import wordnet
 
 DEBUG = True
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./react-app/build/static", template_folder="./react-app/build")
 app.config.from_object(__name__)
 
 
@@ -33,6 +33,11 @@ def find_synonym(original_word):
             if word != original_word and word[0].islower() and '_' not in word:
                 synonyms.add(word)
     return synonyms
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 
 @app.route('/api')
