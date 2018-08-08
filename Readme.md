@@ -10,6 +10,11 @@ Install pip, yarn.
 3) Run app with `python server.py`
 
 
+## About app
+
+You can drag and drop .txt file to web page. After that file uploads to backend throught websocket connection. Backend processes content of the file (tokenize, POS tagging) and looks for synonyms using NLTK lemmas. 
+
+
 ## About
 
 I more like Typescript+Angular/Vue guy, so I wasted some time on React part due to lack of experience.
