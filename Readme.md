@@ -10,7 +10,7 @@ Install pip, yarn.
 3) Run app with `python server.py`
 
 
-##About
+## About
 
 I more like Typescript+Angular/Vue guy, so I wasted some time on React part due to lack of experience.
 
